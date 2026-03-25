@@ -72,12 +72,11 @@ Excel Reports (Export Feature)
   - product_id  
   - product_name  
   - category  
-  - price  
-
-- **Inventory (optional)**
-  - product_id  
-  - stock_level  
-  - last_updated  
+  - price
+  - product_id
+  - stars
+  - reviews
+  - is_best_seller
 
 ---
 
@@ -130,6 +129,10 @@ This project demonstrates:
 -	Big data processing with PySpark
 -	Data modelling and transformation
 -	Business intelligence and reporting
+
+## Data Sources
+-   Product data from https://www.kaggle.com/datasets/asaniczka/amazon-uk-products-dataset-2023
+-   Customer data generated using Faker
 
 ## 👤 Author
 Tinotenda Dangarembizi
