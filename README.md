@@ -5,7 +5,7 @@
 ---
 
 ## 📌 Overview
-**InsightCart** is a scalable e-commerce analytics pipeline that processes, transforms, and analyses transactional data. The system uses PySpark on Apache Spark within Databricks to build analytics-ready datasets, which are then visualised through interactive dashboards in Microsoft Power BI.
+**InsightCart** is a scalable e-commerce analytics pipeline that processes, transforms, and analyses transactional data. The system uses **PySpark** for data processing and **Postrgres** for storage to build analytics-ready datasets, which are then visualised through interactive dashboards in **Microsoft Power BI**.
 
 This project demonstrates an end-to-end data workflow, from raw data ingestion to business intelligence reporting, with optional Excel export functionality.
 
@@ -15,9 +15,9 @@ This project demonstrates an end-to-end data workflow, from raw data ingestion t
 
 Data Source (CSV / Generated Data) </br>
 ↓ </br>
-Databricks (PySpark Processing) </br>
+PySpark Processing(Cleaning and Transformation) </br>
 ↓ </br>
-Delta Tables (Storage Layer) </br>
+PostgreSQL (Star Schema: Fact and Dimension tables) </br>
 ↓ </br>
 Power BI Dashboard (Visualisation) </br>
 ↓ </br>
@@ -28,9 +28,8 @@ Excel Reports (Export Feature)
 ## ⚙️ Tech Stack
 
 - **Processing:** PySpark (Apache Spark)  
-- **Platform:** Databricks  
 - **Visualisation:** Microsoft Power BI  
-- **Storage:** Delta Tables / SQL Warehouse  
+- **Storage:** Delta Tables / PostgreSQL  
 - **Language:** Python  
 
 ---
@@ -41,7 +40,7 @@ Excel Reports (Export Feature)
 - Data cleaning and transformation using PySpark  
 - Star schema data modelling (fact and dimension tables)  
 - KPI generation (revenue, average order value, sales trends)  
-- Scalable data storage using Delta tables  
+- Scalable data storage using PostgreSQL/ Delta tables  
 - Interactive dashboards in Power BI  
 - Automated Excel report generation  
 
@@ -110,7 +109,7 @@ The dashboard includes:
 -	Key performance indicators (KPIs)
 
 ## Usage
-1.	Connect Microsoft Power BI to your Databricks SQL endpoint
+1.	Connect Microsoft Power BI to PostgreSQL/ Delta tables
 2.	Load Delta tables
 3.	Open or build the .pbix dashboard
 
@@ -118,7 +117,7 @@ The dashboard includes:
 Processed datasets can be exported as Excel reports for offline analysis and sharing. This is implemented using PySpark to Pandas conversion and automated scripts.
 
 ## 🔮 Future Improvements
-- Real-time data streaming with Spark Structured Streaming
+- 	Real-time data streaming with Spark Structured Streaming
 -	API layer (FastAPI)
 -	Automated scheduling (daily pipelines)
 -	Cloud deployment (AWS / Azure)
